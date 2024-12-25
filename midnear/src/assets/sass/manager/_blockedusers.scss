@@ -1,0 +1,103 @@
+// 전체 레이아웃
+.blocked-users-container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+}
+
+// 고객 ID 입력 필드와 버튼
+.input-group {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+
+  input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid var(--gray300);
+    font-size: 16px;
+    border-right: none;
+
+    &:focus {
+      outline: none;
+      border: 1px solid var(--gray600); /* 포커스 시 다른 색으로 변경 */
+    }
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: var(--gray900); /* 버튼 색을 gray900으로 설정 */
+    color: white;
+    border: 1px solid var(--gray300);
+    cursor: pointer;
+    border-left: none;
+
+    &:hover {
+      background-color: var(--gray800); /* hover 시 색상 변경 */
+    }
+  }
+}
+
+// 드롭다운 선택
+.select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--gray300);
+  font-size: 16px;
+
+  &:focus {
+    outline: none; /* 기본 포커스 테두리 제거 */
+    border: 1px solid var(--gray600); /* 포커스 시 다른 색으로 변경 */
+  }
+
+  &:not([value='']) {
+    color: black;
+  }
+}
+
+// 필터링된 ID 목록 스타일
+.filtered-ids {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 8px; /* 필터링된 ID 목록 간격 */
+  border: 1px solid var(--gray300);
+  max-height: 200px;
+  overflow-y: auto;
+  background-color: white;
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+
+  li {
+    padding: 8px;
+    cursor: pointer;
+    background-color: #f9f9f9;
+    margin-bottom: 4px;
+
+    &:hover {
+      background-color: #e0e0e0;
+    }
+  }
+}
+
+// 등록 버튼
+.register-btn {
+  width: 80px;
+  padding: 10px;
+  background-color: var(--gray900); /* 버튼 색을 gray900으로 설정 */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 24px;
+
+  &:disabled {
+    background-color: var(--gray300);
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    background-color: var(--gray800); /* hover 시 색상 변경 */
+  }
+}
