@@ -1,55 +1,82 @@
 .product-add-container {
+  
+  // H2 스타일
   h2 {
-    font-size: 18px;
-    margin-bottom: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 12px;
   }
 
-  // 카테고리 섹션
-  .pa-section-category {
-    margin-bottom: 24px;
+  // H3 스타일
+  h3 {
+    font-size: 15px;
+    font-weight: bold;
+  }
 
-    .pa-content {
-      width: 1692px;
-      padding: 16px;
-      background-color: var(--white); // 하얀 배경
-      border: 1px solid var(--gray300);
+// 카테고리 섹션
+.pa-section-category {
+  margin-bottom: 24px;
 
-      .pa-section-header {
+  .pa-content {
+    width: 1692px;
+    padding: 16px;
+    background-color: var(--white);
+    border: 1px solid var(--gray300);
+
+    .pa-section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--white);
+      padding: 8px 0;
+
+      h3 {
+        font-size: 16px;
+        margin: 0;
+        padding-left: 8px;
+      }
+    }
+
+    .pa-input-group {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+
+      .select-wrapper {
         display: flex;
-        justify-content: space-between;
         align-items: center;
-        background-color: var(--white);
-        padding: 8px 0;
+        position: relative;
+      }
 
-        h3 {
-          font-size: 16px;
-          margin: 0;
-          padding-left: 8px;
+      select {
+        width: 176px;
+        height: 36px;
+        font-size: 12px;
+        padding: 8px;
+        padding-right: 24px; /* 충분한 공간을 만들어줌 */
+        border: 1px solid var(--gray300);
+        background-color: var(--white);
+        appearance: none; /* 기본 드롭다운 화살표 제거 */
+        
+        &:focus {
+          outline: none;
+          border-color: var(--black);
         }
       }
 
-      .pa-input-group {
-        display: flex;
-        gap: 10px;
-
-        select {
-          width: 176px;
-          height: 36px;
-          font-size: 12px;
-          padding: 8px;
-          border: 1px solid var(--gray300);
-          background-color: var(--white);
-
-          &:focus {
-            outline: none;
-            border-color: var(--black);
-          }
-        }
+      .dropdown-arrow {
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 16px; /* ▼ 아이콘 크기 조정 */
+        color: var(--gray900); /* 아이콘 색상 */
       }
     }
   }
+}
 
-  // 상품명 섹션
+  // 이름 섹션
   .pa-section-name {
     margin-bottom: 24px;
 
@@ -78,7 +105,7 @@
         gap: 10px;
 
         input {
-          width: 336px;
+          width: 1644px;
           height: 36px;
           font-size: 12px;
           padding: 8px;
@@ -108,13 +135,13 @@
     }
   }
 
-
+  // 가격 및 설명 섹션
   .priceanddescription {
-    display: flex;           /* 두 섹션을 나란히 배치 */
-    gap: 20px;               /* 섹션 간의 간격을 추가 */
+    display: flex;
+    gap: 20px;
   }
 
-  // 상품가격 섹션
+  // 가격 섹션
   .pa-section-price {
     margin-bottom: 24px;
 
@@ -122,7 +149,7 @@
       width: 336px;
       height: 150px;
       padding: 16px;
-      background-color: var(--white); // 하얀 배경
+      background-color: var(--white);
       border: 1px solid var(--gray300);
 
       .pa-section-header {
@@ -174,28 +201,28 @@
     }
   }
 
-  // 상세설명 섹션 (사이즈 가이드와 동일한 디자인)
+  // 설명 섹션
   .pa-section-description {
     margin-bottom: 24px;
-  
+
     .pa-content {
       width: 1332px;
       height: 150px;
       padding: 16px;
       background-color: var(--white);
       border: 1px solid var(--gray300);
-  
+
       h3 {
         font-size: 16px;
         margin-bottom: 8px;
       }
-  
+
       .pa-input-group {
         display: flex;
         gap: 10px;
 
         textarea {
-          width: 1332px;  // 사이즈 가이드에 맞는 길이
+          width: 1332px;
           height: 72px;
           font-size: 12px;
           padding: 8px;
@@ -254,7 +281,7 @@
         gap: 10px;
 
         textarea {
-          width: 1332px;  // 사이즈 가이드에 맞는 길이
+          width: 1644px;
           height: 72px;
           font-size: 12px;
           padding: 8px;
@@ -284,72 +311,215 @@
     }
   }
 
+  // 색상 섹션
+  .pa-section-color {
+    margin-bottom: 24px;
 
-  // 등록 버튼
-  .pa-register-btn {
-    width: 100px;
+    .pa-content {
+      width: 1692px;
+      padding: 16px;
+      background-color: var(--white);
+      border: 1px solid var(--gray300);
+
+      h3 {
+        font-size: 16px;
+        margin-bottom: 8px;
+      }
+
+      .pa-input-group {
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: wrap;
+
+        .pa-add-btn {
+          width: 24px;
+          height: 24px;
+          background-color: var(--white);
+          color: var(--gray900);
+          border: 1px solid var(--gray300);
+          cursor: pointer;
+          font-size: 16px;
+
+          &:hover {
+            background-color: var(--black);
+          }
+        }
+
+        .color-field {
+          display: flex;
+          flex-direction: column;
+          width: 150px;
+          position: relative;
+          gap: 6px;
+
+          .color-input {
+            min-width: 41px;
+            height: 24px;
+            font-size: 12px;
+            padding: 4px;
+            border: 1px solid var(--gray300);
+            background-color: var(--white);
+
+            &:focus {
+              outline: none;
+              border-color: var(--black);
+            }
+          }
+
+          .pa-remove-btn {
+            position: absolute;
+            top: -13px;
+            right: 0;
+            width: 32px;
+            height: 14px;
+            background-color: var(--white);
+            color: var(--gray900);
+            font-size: 12px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid var(--gray300);
+
+            &:hover {
+              background-color: var(--black);
+            }
+          }
+        }
+      }
+    }
+  }
+  .size-container {
+    display: flex;
+        gap: 12px;
+        align-items: center;
+        flex-wrap: wrap;
+  }
+  .size-quantity-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    position: relative;
+    padding-top: 10px; /* Ensure enough space above for the button */
+  }
+  
+  .pa-remove-btn {
+    position: absolute;
+    top: -3px; /* Adjust this to fit the button properly */
+    right: 0;
+    width: 32px;
+    height: 14px;
+    background-color: var(--white);
+    color: var(--gray900);
+    font-size: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--gray300);
+  
+    &:hover {
+      background-color: var(--black);
+    }
+  }
+  
+  .size-quantity-inputs {
+    display: flex;
+    align-items: center;
+  }
+  
+  .pa-input {
+    width: 150px;
     height: 36px;
-    background-color: var(--gray900);
-    color: var(--white);
-    border: none;
+    font-size: 12px;
+    border: 1px solid var(--gray300);
+    background-color: var(--white);
+  
+    &:focus {
+      outline: none;
+      border-color: var(--black);
+    }
+  }
+  
+  .pa-add-btn {
+    width: 24px;
+    height: 24px;
+    background-color: var(--white);
+    color: var(--gray900);
+    border: 1px solid var(--gray300);
     cursor: pointer;
     font-size: 16px;
-
-    &:disabled {
-      background-color: var(--gray300);
-      cursor: not-allowed;
-    }
 
     &:hover {
       background-color: var(--black);
     }
   }
 
+  // 이미지 섹션
+  .pa-section-image {
+    margin-bottom: 24px;
 
+    .pa-content {
+      width: 1692px;
+      padding: 16px;
+      background-color: var(--white);
+      border: 1px solid var(--gray300);
+      margin-bottom: 12px;
 
-.pa-section-color {
-  margin-bottom: 24px;
-
-  .pa-content {
-    width: 1692px;
-    padding: 16px;
-    background-color: var(--white); 
-    border: 1px solid var(--gray300);
-
-    h3 {
-      font-size: 16px;
-      margin-bottom: 8px;
-    }
-
-    .pa-input-group {
-      display: flex;
-      gap: 12px;
-      align-items: center;
-      flex-wrap: wrap;  // 여러 개의 색상 필드가 줄 바꿈 될 수 있도록 함
-
-      .pa-add-btn {
-        width: 32px;
-        height: 24px;
-        background-color: var(--gray900);
-        color: var(--white);
-        border: none;
-        cursor: pointer;
+      h3 {
         font-size: 16px;
+        margin-bottom: 8px;
+      }
 
-        &:hover {
-          background-color: var(--black);
+      .pa-input-group {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+
+        .pa-input-file {
+          display: none;
+        }
+        .pa-input-file-label {
+          display: inline-flex;
+          justify-content: center;
+          align-items: center;
+          width: 90px;
+          height: 36px;
+          background-color: var(--white);
+          color: var(--gray900);
+          border: 1px solid var(--gray300);
+          cursor: pointer;
+          font-size: 14px;
+          text-align: center;
+        }
+        
+        .pa-input-file {
+          display: none; /* 기본 file input은 숨김 */
         }
       }
 
-      .color-field {
-        display: flex;
-        flex-direction: column;
-       
-        position: relative;
-        gap: 6px;
+      .pa-add-btn {
+          width: 24px;
+          height: 24px;
+          background-color: var(--white);
+          color: var(--gray900);
+          border: 1px solid var(--gray300);
+          cursor: pointer;
+          font-size: 16px;
 
-        .color-input {
-          min-width: 41px;
+          &:hover {
+            background-color: var(--black);
+          }
+        
+      }
+
+      .size-quantity-field {
+        display: flex;
+        height: 40px;
+
+        .pa-input {
+          width: 80px;
           height: 24px;
           font-size: 12px;
           padding: 4px;
@@ -362,120 +532,103 @@
           }
         }
 
-        .pa-remove-btn {
-          position: absolute;
-          top: -16px;  // 버튼을 입력 필드 위쪽에 위치시킴
-          right: 0;
-          width: 32px;
-          height: 14px;
-          background-color: var(--gray900);
-          color: var(--white);
+        
+        .quantity-input {
+          width: 80px;
+          height: 24px;
           font-size: 12px;
-          cursor: pointer;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-
-          &:hover {
-            background-color: var(--black);
-          }
-        }
-      }
-
-      .color-input {
-        min-width: 41px;
-        height: 24px;
-        font-size: 12px;
-        padding: 4px;
-        border: 1px solid var(--gray300);
-        background-color: var(--white);
-
-        &:focus {
-          outline: none;
-          border-color: var(--black);
-        }
-      }
-    }
-  }
-}
-
-.pa-section-image {
-  margin-bottom: 24px;
-  
-
-  .pa-content {
-    width: 1692px;
-    padding: 16px;
-    background-color: var(--white);  // 배경색
-    border: 1px solid var(--gray300);
-    
-    
-
-    .pa-section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: var(--white);
-      padding: 8px 0;
-
-      h3 {
-        font-size: 16px;
-        margin: 0;
-        padding-left: 8px;
-      }
-    }
-
-    .image-upload-section {
-      h3 {
-        font-size: 14px;
-        margin-bottom: 12px;
-        color: var(--gray900);
-      }
-      .image-preview {
-        margin-top: 12px;
-
-        .image-thumbnail {
-          height: 248px; /* 세로 크기 */
-          object-fit: contain; /* 이미지 비율을 유지하며 크기 맞추기 */
-          border: 1px solid var(--gray300);
-        }
-      }
-
-        display: flex;
-        gap: 24px;
-        align-items: center;
-
-        input[type="file"] {
-          width: 200px;
-          padding: 8px;
-          font-size: 12px;
-          border: 1px solid var(--gray300);
-          background-color: var(--white);
-          border-radius: 4px;
+          padding: 4px;
+          // border: 1px solid var(--black);
+          background-color: var(--gray300);
 
           &:focus {
             outline: none;
             border-color: var(--black);
           }
         }
+      }
 
-        button {
-          width: 100px;
-          height: 36px;
-          background-color: var(--gray900);
-          color: var(--white);
-          border: none;
-          cursor: pointer;
-          font-size: 12px;
-          border-radius: 4px;
+      .image-preview {
+        display: flex;
+        gap: 16px;
+        flex-wrap: no-wrap;
+        overflow-x: auto; /* 수평 스크롤 활성화 */
+      }
 
-          &:hover {
-            background-color: var(--black);
-          }
-        }
+      .image-thumbnail {
+        width: 156px;
+        height: 248px;
+        object-fit: contain;
+
+      }
+
+      .image-thumbnail-container {
+        display: flex;
+        display: inline-flex;
+        flex-direction: column; /* 체크박스와 이미지를 세로로 정렬 */
+        align-items: end; /* 요소들을 가로 중앙으로 정렬 */
       }
     }
   }
+
+  // 등록 버튼 스타일
+  .pa-register-btn {
+    height: 24px;
+    font-size: 12px;
+    padding: 4px;
+    border: 1px solid var(--gray300);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--white);
+    color: var(--gray900);
+  }
+  
+  .select-btn {
+    width: 74px;
+  }
+  
+  .delete-btn {
+    width: 48px;
+    background-color: var(--gray900);
+    color: var(--white);
+  }
+  
+  .pa-register-btn:hover {
+    background-color: var(--black);
+  }
+
+  // 이미지 체크박스 스타일
+  .image-checkbox {
+    width: 20px;
+    height: 20px;
+
+    cursor: pointer;
+    border: 1px solid var(--gray300);
+    background-color: #fff;
+    appearance: none;
+    outline: none;
+    position: relative;
+  }
+
+  .image-checkbox:checked {
+    border-color: var(--gray300);
+  }
+
+  .image-checkbox:checked::after {
+    content: "✓";
+    font:bold;
+    position: absolute;
+    top: 0;
+    left: 3px;
+    color: rgb(0, 0, 0);
+    font-size: 14px;
+  }
 }
 
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* 버튼들을 오른쪽 끝으로 배치 */
+  gap: 0; /* 버튼들 간의 간격을 없앰 */
 }
