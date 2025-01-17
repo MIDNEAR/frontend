@@ -1,7 +1,6 @@
 import React from 'react'
 import SortMenu from '../Shop/SortMenu'
 import search from '../../assets/img/magazine/search.svg'
-import bar from '../../assets/img/magazine/listBar.svg'
 import frontImg from '../../assets/img/product/prod1.png'
 import backImg from '../../assets/img/product/prod2.png'
 
@@ -40,12 +39,12 @@ const MagazinDetail = () => {
           <div className='magazine-detail'>
             <h1 className='title'>{dummyList[0].title}</h1>
             <p className='date'>{dummyList[0].date}</p>
-            <div className='images'>
+            <div className='magazine-images'>
                 <img src={dummyList[0].image1} className='img1' />
                 <img src={dummyList[0].image2} className='img2' />
                 <img src={dummyList[0].image3} className='img3' />
+                <img src={dummyList[0].image3} className='img3' />
             </div>
-            <div><img src={bar} className='bar' /></div>
             <div><p className='content'>{dummyList[0].content}</p></div>
           </div>
         </div>

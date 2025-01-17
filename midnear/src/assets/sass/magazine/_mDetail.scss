@@ -33,18 +33,16 @@
         font-weight: 500;
         margin-bottom: 2rem;
     }
-    .images{
-        width: 120rem;
+    .magazine-images{
         display: flex;
-        justify-content: space-between;
-
-        img{object-fit: cover;}
-        .img1, .img2{
-            width: 46.2rem;
-            height: 70.1rem;
-        }
-        .img3{
-            width: 23rem;
+        flex-direction: row;
+        width: 120rem;
+        height: 74.2rem;
+        margin-bottom: 2.4rem;
+        gap: 2.4rem;
+        overflow-x: scroll; 
+        img{
+            width: auto;
             height: 70.1rem;
         }
     }

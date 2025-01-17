@@ -27,28 +27,27 @@ input{ outline: none;}
                 .search-btn{
                     width: 1.8rem;
                     height: 1.8rem;
+                    margin-right: 0.3rem;
                 }
             }
         }
     }
     .bottom{
         align-items: center;
-        margin: 0;
+        margin: 0 0 3rem 0;
         .bar{
             width: 45.7rem;
             height: 1rem;
             margin: 2.8rem;
         }
         .magazine-list{
-            height: 88.2rem;
+            height: 91.4rem;
             width: 120rem;
+            padding-bottom: 3.2rem;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
-            overflow-x: auto;      
-            &::-webkit-scrollbar {
-                display: none;
-            }
+            overflow-x: scroll;
       
             .list-section{
                 display: flex;
@@ -82,14 +81,6 @@ input{ outline: none;}
                         font-size: 1.2rem;
                         display: flex;
                     }
-                    .date{
-                        text-align: left;
-                        width: 6rem;
-                    }
-                    .title{
-                        text-align: right;
-                        width: 14rem;;
-                    }
                 }
                 &:hover .magazine-info{opacity: 1;}
     
@@ -97,4 +88,36 @@ input{ outline: none;}
             } 
         }
     }
+}
+.magazine-images::-webkit-scrollbar, .magazine-list::-webkit-scrollbar{
+    height: 1rem;
+}
+.magazine-images::-webkit-scrollbar-track, .magazine-list::-webkit-scrollbar-track{
+    background-color: var(--gray300);
+    background-clip: padding-box;
+    border: 0.45rem solid var(--none);
+}
+.magazine-images::-webkit-scrollbar-thumb, .magazine-list::-webkit-scrollbar-thumb{
+    background: radial-gradient(circle, var(--gray900) 0.5rem,  var(--none) 0.5rem );
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 1rem 1rem; 
+    border-radius: 10rem; 
+    visibility: visible;
+}
+.magazine-images::-webkit-scrollbar-button:start:increment, 
+.magazine-images::-webkit-scrollbar-button:end:decrement, 
+.magazine-list::-webkit-scrollbar-button:start:increment, 
+.magazine-list::-webkit-scrollbar-button:end:decrement {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color:var(--gray900);
+}
+.magazine-images::-webkit-scrollbar-button:end:increment, 
+.magazine-images::-webkit-scrollbar-button:start:decrement, 
+.magazine-list::-webkit-scrollbar-button:end:increment, 
+.magazine-list::-webkit-scrollbar-button:start:decrement {
+  width: calc((120rem - 43.7rem)/2);;
+  background-color: var(--none); 
 }

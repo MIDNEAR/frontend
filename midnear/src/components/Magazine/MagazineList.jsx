@@ -2,7 +2,6 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import SortMenu from '../Shop/SortMenu'
 import search from '../../assets/img/magazine/search.svg'
-import bar from '../../assets/img/magazine/listBar.svg'
 import frontImg from '../../assets/img/product/prod1.png'
 import backImg from '../../assets/img/product/prod2.png'
 
@@ -89,25 +88,6 @@ const MagazineList = () => {
       image3: frontImg,
       content:''
     },
-    
-    { 
-      id: 10,
-      title: '가을에 그는 짜장면이 먹고 싶다.',
-      date: '2025. 02. 8',
-      image1: frontImg,
-      image2: backImg,
-      image3: frontImg,
-      content:''
-    },
-    { 
-      id: 11,
-      title: '가을에 그는 짜장면이 먹고 싶다.',
-      date: '2025. 02. 7',
-      image1: frontImg,
-      image2: backImg,
-      image3: frontImg,
-      content:''
-    },
   ]
   const topList = dummyList.filter((_, index) => index % 2 === 0);
   const bottomList = dummyList.filter((_, index) => index % 2 !== 0);
@@ -131,7 +111,7 @@ const MagazineList = () => {
 
         <div className='bottom'>
           <div className='magazine-list'>
-          {[topList, bottomList].map((list, index) => (
+            {[topList, bottomList].map((list, index) => (
               <div key={index} className={`list-section ${index === 0 ? 'top-list' : 'bottom-list'}`}>
                 {list.map((item) => (
                   <Link to="/others/magazine/detail" key={item.id}>
@@ -147,7 +127,6 @@ const MagazineList = () => {
               </div>
             ))}
           </div>
-          <div><img src={bar} className='bar' /></div>
         </div>
       </div>
     </div>
